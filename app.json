@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "QR Code Mobile",
+    "slug": "qrcode-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.arabiantransformers.qrcodemobile",
+      "infoPlist": {
+        "NFCReaderUsageDescription": "This application requires NFC to program and read employee digital business cards."
+      },
+      "entitlements": {
+        "com.apple.developer.nfc.readersession.formats": [
+          "NDEF",
+          "TAG"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.arabiantransformers.qrcodemobile",
+      "permissions": [
+        "NFC",
+        "android.permission.NFC"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "react-native-nfc-manager",
+        {
+          "nfcPermission": "This app requires access to NFC to read and program digital business cards."
+        }
+      ],
+      "expo-asset"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "710a27f6-f4e7-4d4a-a4a0-fcf0a72e9416"
+      }
+    },
+    "owner": "itsnabeelk",
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    }
+  }
+}
